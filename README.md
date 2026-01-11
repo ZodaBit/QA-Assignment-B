@@ -43,8 +43,29 @@ package.json
 ```
 
 ---
+## Tests Overview – placeOrder.spec.ts
+
+This file contains **two end-to-end scenarios** for placing an order in the Tricentis Demo Web Shop using Playwright and the Page Object Model (POM).
+
+### 1. Logged-in User – Place Order
+```ts
+loginTest("Place order with multiple products via Login", async ({ loginPage }) => {
+  await placeOrder({ page: loginPage.page });
+});
 
 
+
+Simulates an existing user logging in, adding multiple products, and completing checkout.
+```
+
+### 2. New User – Register & Place Order
+```ts
+registerTest("Place order with multiple products via Register", async ({ registerPage }) => {
+  await placeOrder({ page: registerPage.page, fillBilling: true });
+});
+
+Simulates a new user registering, filling billing/shipping info, adding products, and completing checkout.
+```
 ---
 ### Required Tools
 
@@ -58,21 +79,9 @@ package.json
   - Instructions: [Set JAVA_HOME](https://confluence.atlassian.com/conf92/setting-the-java_home-variable-in-windows-1477577437.html)
 
 
-- **Allure Commandline**  
-  - Download: [Apache Maven](https://maven.apache.org/download.cgi)  
-  - Instructions on setting up Maven on Windows: [Setup Guide](https://maven.apache.org/install.html)
-  - Instructions on setting video: [Setup Guide video](https://www.youtube.com/watch?v=XEphzGQz-nI).
 
 ## 🚀 Quick Start – UI Tests
 
-### Prerequisites for Node and npm
-- Node.js 18+ (v25.2.1 recommended)   - Download the latest  version: 
-- 
-- Java JDK 8+ (required for Allure)
-
-### Prerequisites for allure 
-- Node.js 18+ (v25.2.1 recommended)   - Download the latest  version: [Node Js ](https://nodejs.org/en/download)
-- npm
 
 ### Install dependencies
 
@@ -95,9 +104,9 @@ npx playwright install
 
 ### Environment
 
-Create a `.env` file in the Playwright project root (example):
+Create a `.env` file in the Playwright project inside (QA-Assignment-UI-Automation-Playwright) folder root 
 
-```env
+```
 EMAIL="zb@zb.com"
 PASSWORD="Abc@123"
 
@@ -137,6 +146,37 @@ Generate and open the Allure report after running tests:
 
 
 ---
+
+### Summary Guide
+
+```bash
+
+# 1️⃣ Navigate to the project folder
+cd QA-Assignment-UI-Automation-Playwright
+
+# 2️⃣ Install Allure Commandline globally (optional)
+npm install -g allure-commandline --save-dev
+
+# 3️⃣ Install project dependencies
+npm install
+
+# 4️⃣ Install Playwright browsers
+npx playwright install
+
+# 5️⃣ Create a .env file in the project root
+# Example contents:
+# EMAIL="zb@zb.com"
+# PASSWORD="Abc@123"
+
+# 6️⃣ Run the Playwright tests
+npx playwright test
+
+# 7️⃣ Generate Allure report
+allure generate allure-results --clean -o allure-report
+
+# 8️⃣ Open Allure report in browser
+allure open allure-report
+```
 
 © 2026 ZodaBit | QA Assignment
 
