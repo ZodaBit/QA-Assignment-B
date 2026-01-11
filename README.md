@@ -1,105 +1,99 @@
-Bamboo UI Automation — Playwright Project
+# 🎋 Bamboo QA Automation Engineer Assignment
 
-This repository contains automated end-to-end UI tests for the Tricentis Demo Web Shop using Playwright and TypeScript, with Allure for reporting.
+[![Playwright](https://img.shields.io/badge/Playwright-Testing-111?logo=playwright&logoColor=white)](https://playwright.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.x-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Allure](https://img.shields.io/badge/Allure-Report-orange)](https://github.com/allure-framework/allure2)
 
-Project Folder Structure
-bamboo-ui-automation-playwright/
- ├── components/       # Reusable UI components (e.g., HeaderComponent, FooterComponent)
- ├── fixtures/         # Test fixtures (common setup for tests)
- ├── models/           # Data models for tests
- ├── pages/            # Page Object Models (e.g., LoginPage, HomePage, ProductListPage)
- ├── testdata/         # Test data files
- ├── tests/            # Playwright test files (e.g., login.spec.ts, checkout.spec.ts)
- ├── bamboo-manual-test/   # Manual test assignments
- ├── bamboo-api-automation/ # Postman collections
- ├── bonus-ai/         # AI tools demonstration for development
- ├── .env              # Environment variables
- ├── package.json      # NPM dependencies
- └── playwright.config.ts   # Playwright configuration
+A concise end-to-end test suite for the **Tricentis Demo Web Shop**. This repository contains UI automation (Playwright), API collections (Postman), manual test doc, and performance docs.
 
-Environment Setup
+---
 
-Create a .env file in the root folder of bamboo-ui-automation-playwright.
+## 📁 Repository Layout
 
-Add your credentials:
+Top-level folders (high level):
 
+```
+Bamboo-UI-Automation-Playwright/   # Playwright UI tests and helpers
+Bamboo-Api-Automation-Postman/      # Postman collections and environments
+Bamboo-Manual-Test/                 # Manual test cases and documentation
+Bamboo-Performance-Test/            # Performance scripts and results
+```
+
+Inside the Playwright project (Bamboo-UI-Automation-Playwright folder) you'll commonly see:
+
+```
+components/     # Reusable UI components
+fixtures/       # Test fixtures and setup helpers
+model/          # Data models and test data shapes
+pages/          # Page Object Models (POM)
+testData/       # Static JSON test data
+tests/          # Playwright test files (*.spec.ts)
+playwright.config.ts
+package.json
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 16+ (or stable LTS)
+- npm or pnpm
+- Git
+
+### Environment
+
+Create a `.env` file in the Playwright project root (example):
+
+```env
 EMAIL="zb@zb.com"
 PASSWORD="Abc@123"
-BASE_URL="https://demowebshop.tricentis.com"
 
+🚩 **IMPORTANT:** Security Note: These credentials are provided for assignment evaluation purposes only. In a professional environment, sensitive data should never be committed to source control or displayed in a README.
 
-Install dependencies:
+```
 
+### Install dependencies
+
+```bash
 npm install
+npx playwright install # installs browsers
+```
+
+### Run tests
+
+| Command                                   | Description            |
+| ----------------------------------------- | ---------------------- |
+| `npm test` or `npx playwright test`       | Run all UI tests       |
+| `npx playwright test tests/placeOrder.spec.spec.ts` | Run a single test file |
 
 
-Install Playwright browsers:
+---
 
-npx playwright install
+## 📊 Reports (Allure)
 
-Running UI Automation Tests
-Run All Tests
-npx playwright test
+Generate and open the Allure report after running tests:
 
-Run a Specific Test
-npx playwright test tests/login.spec.ts
-
-Generating and Viewing Allure Reports
-
-After running the tests, generate the Allure report:
-
+```bash
 allure generate allure-results --clean -o allure-report
 allure open allure-report
+```
 
 
-allure-results → generated automatically by allure-playwright
+---
 
-allure-report → HTML report folder to open in a browser
+## 📂 Additional Modules
 
-Test Data and Reusability
+- **Manual Testing:** `Bamboo-Manual-Test/` — manual test scenarios docs
+- **API Testing:** `Bamboo-Api-Automation-Postman/` — Postman collections and docs
+- **Performance:** `Bamboo-Performance-Test/` — performance document
+- **AI Tools / Demos:** `bonus-ai/` — optional AI-assisted examples
 
-Test Data: Use .env or files in testdata/ folder for emails, passwords, or product info.
 
-Page Objects: All pages are in pages/ folder, reusable across tests.
+---
 
-Components: UI components (header, footer, etc.) are in components/.
+© 2026 ZodaBit | Bamboo Assignment
 
-Fixtures: Common test setup like login, navigation, or browser setup are in fixtures/.
+---
 
-Manual Test Assignments
-
-Manual test cases for Bamboo assignments are stored in bamboo-manual-test/.
-
-Postman collections for API testing are in bamboo-api-automation/.
-
-Bonus: AI Tools for Accelerating Development
-
-AI tools like ChatGPT can help:
-
-Generate Page Object Models.
-
-Write test scripts in Playwright.
-
-Draft manual test cases.
-
-All AI demo files are stored in bonus-ai/.
-
-Recommended VS Code Extensions
-
-Playwright Test for VS Code
-
-TypeScript
-
-DotENV (for .env file support)
-
-✅ Summary of Workflow:
-
-Create .env with credentials.
-
-Run tests: npx playwright test
-
-Generate Allure report: allure generate allure-results --clean -o allure-report
-
-Open report: allure open allure-report
-
-This setup ensures you can quickly run automation tests, view reports, and manage test data efficiently.
