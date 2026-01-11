@@ -46,17 +46,45 @@ package.json
 
 
 ---
+### Required Tools
+
+- **Node.js 18+** (v25.2.1 recommended)  
+  - Download the latest version: [Node Js ](https://nodejs.org/en/download)
+  - npm (comes bundled with Node.js)
+
+- **Java JDK 8+ (required for Allure reporting ) **  
+  - Download: [Oracle Java 17](https://www.oracle.com/java/technologies/javase/jdk17-downloads.html)  
+  -  **Set up your JAVA_HOME environment variable.**
+  - Instructions: [Set JAVA_HOME](https://confluence.atlassian.com/conf92/setting-the-java_home-variable-in-windows-1477577437.html)
+
+
+- **Allure Commandline**  
+  - Download: [Apache Maven](https://maven.apache.org/download.cgi)  
+  - Instructions on setting up Maven on Windows: [Setup Guide](https://maven.apache.org/install.html)
+  - Instructions on setting video: [Setup Guide video](https://www.youtube.com/watch?v=XEphzGQz-nI).
 
 ## 🚀 Quick Start – UI Tests
 
-### Prerequisites
-- Node.js 18+ (LTS recommended)
-- npm / pnpm
+### Prerequisites for Node and npm
+- Node.js 18+ (v25.2.1 recommended)   - Download the latest  version: 
+- 
+- Java JDK 8+ (required for Allure)
 
-### Setup
+### Prerequisites for allure 
+- Node.js 18+ (v25.2.1 recommended)   - Download the latest  version: [Node Js ](https://nodejs.org/en/download)
+- npm
+
+### Install dependencies
+
 ```bash
 # Navigate to UI project
 cd QA-Assignment-UI-Automation-Playwright
+
+# nstall globally via npm:
+npm install -g allure-commandline --save-dev
+
+#Verify installation:
+allure --version
 
 # Install dependencies
 npm install
@@ -64,6 +92,7 @@ npm install
 # Install required browsers
 npx playwright install
 ```
+
 ### Environment
 
 Create a `.env` file in the Playwright project root (example):
@@ -74,13 +103,6 @@ PASSWORD="Abc@123"
 
 🚩 **IMPORTANT:** Security Note: These credentials are provided for assignment evaluation purposes only. In a professional environment, sensitive data should never be committed to source control or displayed in a README.
 
-```
-
-### Install dependencies
-
-```bash
-npm install
-npx playwright install # installs browsers
 ```
 
 ### Run Tests
