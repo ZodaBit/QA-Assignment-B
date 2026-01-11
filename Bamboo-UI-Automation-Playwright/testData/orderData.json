@@ -1,0 +1,38 @@
+{
+  "lineTotals": [10, 24, 10],
+  "totals": {
+    "subTotal": 44.0,
+    "shipping": 10.0,
+    "paymentFee": 7.0,
+    "tax": 0.0,
+    "total": 61.0
+  },
+  "billingAddress": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john@example.com",
+    "company": "Example Inc.",
+    "country": "United States",
+    "state": "New York",
+    "city": "New York",
+    "address1": "123 Main St",
+    "address2": "Apt 4B",
+    "zip": "10001",
+    "phone": "1234567890",
+    "fax": "0987654321"
+  },
+  "shippingAddress": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john@example.com",
+    "company": "Example Inc.",
+    "country": "United States",
+    "state": "New York",
+    "city": "New York",
+    "address1": "123 Main St",
+    "address2": "Apt 4B",
+    "zip": "10001",
+    "phone": "1234567890",
+    "fax": "0987654321"
+  }
+}
