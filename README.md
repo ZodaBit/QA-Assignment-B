@@ -1,25 +1,35 @@
 # 🎋 Bamboo QA Automation Engineer Assignment
 
-[![Playwright](https://img.shields.io/badge/Playwright-Testing-111?logo=playwright&logoColor=white)](https://playwright.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-4.x-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Playwright](https://img.shields.io/badge/Playwright-Testing-45ba4b?logo=playwright&logoColor=white)](https://playwright.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![Allure](https://img.shields.io/badge/Allure-Report-orange)](https://github.com/allure-framework/allure2)
 
-A concise end-to-end test suite for the **Tricentis Demo Web Shop**. This repository contains UI automation (Playwright), API collections (Postman), manual test doc, and performance docs.
+Complete end-to-end testing solution for **Tricentis Demo Web Shop** including:
+
+- UI Automation (Playwright + TypeScript + POM)
+- API Testing (Postman collections)
+- Manual Test Cases
+- Performance Testing documentation
+- Bonus: AI-assisted test creation demo
 
 ---
 
-## 📁 Repository Layout
+## 📁 Repository Structure
+
 
 Top-level folders (high level):
 
 ```
-Bamboo-UI-Automation-Playwright/   # Playwright UI tests and helpers
-Bamboo-Api-Automation-Postman/      # Postman collections and environments
-Bamboo-Manual-Test/                 # Manual test cases and documentation
-Bamboo-Performance-Test/            # Performance scripts and results
+Bamboo-UI-Automation-Playwright/     # Playwright E2E tests (main focus)
+Bamboo-Api-Automation-Postman/       # Postman API collections + environments
+Bamboo-Manual-Test/                  # Manual test cases (docs & Excel/Word)
+Bamboo-Performance-Test/             # Performance test approach & results
+Bamboo-Ai-Tool-Usage/                # AI prompts & demo materials
 ```
 
-Inside the Playwright project (Bamboo-UI-Automation-Playwright folder) you'll commonly see:
+
+**Playwright folder structure** (Bamboo-UI-Automation-Playwright):
+
 
 ```
 components/     # Reusable UI components
@@ -34,14 +44,26 @@ package.json
 
 ---
 
-## 🚀 Getting Started
+
+---
+
+## 🚀 Quick Start – UI Tests
 
 ### Prerequisites
+- Node.js 18+ (LTS recommended)
+- npm / pnpm
 
-- Node.js 16+ (or stable LTS)
-- npm or pnpm
-- Git
+### Setup
+```bash
+# Navigate to UI project
+cd Bamboo-UI-Automation-Playwright
 
+# Install dependencies
+npm install
+
+# Install required browsers
+npx playwright install
+```
 ### Environment
 
 Create a `.env` file in the Playwright project root (example):
@@ -61,11 +83,11 @@ npm install
 npx playwright install # installs browsers
 ```
 
-### Run tests
+### Run Tests
 
 | Command                                   | Description            |
 | ----------------------------------------- | ---------------------- |
-| `npm test` or `npx playwright test`       | Run all UI tests       |
+|  `npx playwright test`       | Run all UI tests       |
 | `npx playwright test tests/placeOrder.spec.spec.ts` | Run a single test file |
 
 
@@ -75,10 +97,11 @@ npx playwright install # installs browsers
 
 Generate and open the Allure report after running tests:
 
-```bash
-allure generate allure-results --clean -o allure-report
-allure open allure-report
-```
+# Generate report
+```allure generate allure-results --clean -o allure-report```
+
+# Open in browser
+```allure open allure-report```
 
 
 ---
@@ -88,7 +111,7 @@ allure open allure-report
 - **Manual Testing:** `Bamboo-Manual-Test/` — manual test scenarios docs
 - **API Testing:** `Bamboo-Api-Automation-Postman/` — Postman collections and docs
 - **Performance:** `Bamboo-Performance-Test/` — performance document
-- **AI Tools / Demos:** `bonus-ai/` — optional AI-assisted examples
+- **AI Tools / Demos:** `Bamboo-Ai-Tool-Usage/` — AI tools usage demo file
 
 
 ---
