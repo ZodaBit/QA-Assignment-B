@@ -1,4 +1,4 @@
-# 🎋 Bamboo QA Automation Engineer Assignment
+# 🎋  QA Automation Engineer Assignment
 
 [![Playwright](https://img.shields.io/badge/Playwright-Testing-45ba4b?logo=playwright&logoColor=white)](https://playwright.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
@@ -20,15 +20,15 @@ Complete end-to-end testing solution for **Tricentis Demo Web Shop** including:
 Top-level folders (high level):
 
 ```
-Bamboo-UI-Automation-Playwright/     # Playwright E2E tests (main focus)
-Bamboo-Api-Automation-Postman/       # Postman API collections + environments
-Bamboo-Manual-Test/                  # Manual test cases (docs & Excel/Word)
-Bamboo-Performance-Test/             # Performance test approach & results
-Bamboo-Ai-Tool-Usage/                # AI prompts & demo materials
+QA-Assignment-UI-Automation-Playwright/     # Playwright E2E tests (main focus)
+QA-Assignment-Api-Automation-Postman/       # Postman API collections + environments
+QA-Assignment-Manual-Test/                  # Manual test cases (docs & Excel/Word)
+QA-Assignment-Performance-Test/             # Performance test approach & results
+QA-Assignment-Ai-Tool-Usage/                # AI prompts & demo materials
 ```
 
 
-**Playwright folder structure** (Bamboo-UI-Automation-Playwright):
+**Playwright folder structure** (QA-Assignment-UI-Automation-Playwright):
 
 
 ```
@@ -56,7 +56,7 @@ package.json
 ### Setup
 ```bash
 # Navigate to UI project
-cd Bamboo-UI-Automation-Playwright
+cd QA-Assignment-UI-Automation-Playwright
 
 # Install dependencies
 npm install
@@ -108,15 +108,15 @@ Generate and open the Allure report after running tests:
 
 ## 📂 Additional Modules
 
-- **Manual Testing:** `Bamboo-Manual-Test/` — manual test scenarios docs
-- **API Testing:** `Bamboo-Api-Automation-Postman/` — Postman collections and docs
-- **Performance:** `Bamboo-Performance-Test/` — performance document
-- **AI Tools / Demos:** `Bamboo-Ai-Tool-Usage/` — AI tools usage demo file
+- **Manual Testing:** `QA-Assignment-Manual-Test/` — manual test scenarios docs
+- **API Testing:** `QA-Assignment-Api-Automation-Postman/` — Postman collections and docs
+- **Performance:** `QA-Assignment-Performance-Test/` — performance document
+- **AI Tools / Demos:** `QA-Assignment-Ai-Tool-Usage/` — AI tools usage demo file
 
 
 ---
 
-© 2026 ZodaBit | Bamboo Assignment
+© 2026 ZodaBit | QA Assignment
 
 ---
 
